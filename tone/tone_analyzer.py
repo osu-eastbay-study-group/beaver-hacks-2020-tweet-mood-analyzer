@@ -20,3 +20,8 @@ class ToneAnalyzer:
         self._api_key = api_key
         self._api_url = api_url
         self._saved_tones = {}  # keys: strings, values: tone dict for string
+
+    def analyze_tone(self, text):
+        if text not in self._saved_tones:
+            self._save_tone(text)
+        return self._saved_tones[text]
