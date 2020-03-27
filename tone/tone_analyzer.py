@@ -29,6 +29,25 @@ class ToneAnalyzer:
         self._saved_tones = {}  # keys: strings, values: tone dict for string
 
     def analyze_tone(self, text):
+        """Returns the tone analysis data of supplied text and stores it to reduce
+        number of calls to API. If the text was already saved, returns existing
+        data.
+
+        Post-Conditions
+        ---------------
+        text' will be a key in `_saved_tones' with its tone analysis dictionary
+        as its corresponding value.
+
+        Parameters
+        ----------
+        text: str
+            Text to analyze.
+
+        Returns
+        -------
+        dict
+            Tone analysis of the text.
+        """
         if text not in self._saved_tones:
             self._save_tone(text)
         return self._saved_tones[text]
