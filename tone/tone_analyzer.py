@@ -53,6 +53,29 @@ class ToneAnalyzer:
         return self._saved_tones[text]
 
     def _save_tone(self, text):
+        """Helper method.
+
+        Calls the API on `text' and saves result to `_saved_tones'.
+
+        Pre-conditions
+        --------------
+        `text' must not be a key of _saved_tones. In otherwords this should
+        only call the API on text that has not yet been analyzed.
+
+        Post-conditions
+        ---------------
+        `text' will be a key of _saved_tones with value equal to the
+        corresponding tone dict.
+
+        Parameters
+        ----------
+        text: str
+            Text to perform tone analysis.
+
+        Returns
+        -------
+        None
+        """
         encoded_text = urllib.parse.quote(text)
         request_url = f'{self._api_url}{self._GET_METHOD_URL}{encoded_text}'
         response = requests.get(request_url, auth=('apikey', api_key))
