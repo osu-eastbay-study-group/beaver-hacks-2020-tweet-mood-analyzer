@@ -1,7 +1,10 @@
 import urllib
 import requests
 import json
-import os.path
+import os
+from dotenv import load_dotenv
+from pathlib import Path
+from sys import argv
 
 
 class ToneAnalyzer:
@@ -148,3 +151,15 @@ class ToneAnalyzer:
         except FileNotFoundError:  # trying to open non-existent file
             print("Tone file does not exist. "
                   + f"All new tones will be saved to {self._json_file}.")
+
+
+if __name__ == '__main__':
+    # Command line usage only.
+    # Can analyze a string from the commandline with the following command:
+    # $ python tone_analyzer.py "Text-to-analyze"
+    env_path = Path('.') / '.env'
+    load_dotenv(dotenv_path=env_path)
+    text = argv[1]
+    ta = ToneAnalyzer(os.getenv('TONE_KEY'), os.getenv('TONE_URL'))
+    print(ta.analyze_tone(text))
+    ta.save_tones_to_file()
