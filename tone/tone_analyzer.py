@@ -1,6 +1,7 @@
 import urllib
 import requests
 import json
+import os.path
 
 
 class ToneAnalyzer:
@@ -12,8 +13,10 @@ class ToneAnalyzer:
     # ---------------
     # Specific to using general-purpose endpoint via the GET request method.
     _GET_METHOD_URL = '/v3/tone?version=2017-09-21&text='
+    # Default name of JSON file to store tones.
+    _DEFAULT_JSON_FILENAME = 'tones.json'
 
-    def __init__(self, api_key, api_url):
+    def __init__(self, api_key, api_url, json_file=None):
         """Create object of type ToneAnalyzer for a specific API key and URL
         pair.
 
@@ -26,7 +29,18 @@ class ToneAnalyzer:
         """
         self._api_key = api_key
         self._api_url = api_url
-        self._saved_tones = {}  # keys: strings, values: tone dict for string
+
+        # TODO: Write exception class for filename validation.
+        if json_file is not None:
+            assert type(json_file) == str, "Provided filename is not a string!"
+
+        self._json_file = (json_file if json_file is not None
+                           else self._DEFAULT_JSON_FILENAME)
+
+        # keys: strings, values: tone dict for string
+        self._saved_tones = (self.load_tones_from_file()
+                             if os.path.exists(self._json_file) else {})
+
 
     def analyze_tone(self, text):
         """Returns the tone analysis data of supplied text and stores it to reduce
