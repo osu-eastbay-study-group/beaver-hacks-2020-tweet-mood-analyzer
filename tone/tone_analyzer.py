@@ -158,6 +158,32 @@ class ToneAnalyzer:
             print("Tone file does not exist. "
                   + f"All new tones will be saved to {self._json_file}.")
 
+    def update_tones_from_file(self, filename):
+        """Combine tone data from `filename' to current session's tone
+        data.
+
+        Note that equivalent keys will be overwritten though
+        this should not be an issue as the API should be returning
+        identical tone data for equivalent texts.
+
+        Parameters
+        ----------
+        filename: str
+            Filename of JSON file to update from. Should not be the
+            same as `_json_file'.
+
+        Returns
+        -------
+        bool
+            True if an update was performed, otherwise False.
+        """
+        in_filename = self._json_file if filename is None else filename
+        dct_to_add = self.load_tones_from_file(in_filename)
+        if type(dct_to_add) == dict:
+            self._saved_tones.update(dct_to_add)
+            return True
+        else:
+            return False
 
 if __name__ == '__main__':
     # Command line usage only.
