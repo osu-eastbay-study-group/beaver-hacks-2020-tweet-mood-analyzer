@@ -101,7 +101,7 @@ class ToneAnalyzer:
         """
         encoded_text = urllib.parse.quote(text)
         request_url = f'{self._api_url}{self._GET_METHOD_URL}{encoded_text}'
-        response = requests.get(request_url, auth=('apikey', api_key))
+        response = requests.get(request_url, auth=('apikey', self._api_key))
         tone = json.loads(response.content.decode())
         self._saved_tones[text] = tone
 
