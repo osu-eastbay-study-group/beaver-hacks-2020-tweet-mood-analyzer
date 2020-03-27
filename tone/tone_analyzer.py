@@ -147,7 +147,8 @@ class ToneAnalyzer:
 
         Returns
         -------
-        None
+        dict
+            Returns a dictionary with the tone data of specified file.
         """
         in_filename = self._json_file if filename is None else filename
         try:
