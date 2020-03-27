@@ -1,3 +1,8 @@
+#   PyPI Dependencies: python-dotenv requests
+#        Requirements: API key and url must be specified in a file named .env
+#                      in the working directory.
+# Usage (commandline): $ python tone_analyzer.py "Text-to-analyze"
+
 import urllib
 import requests
 import json
