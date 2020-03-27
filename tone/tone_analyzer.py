@@ -14,8 +14,15 @@ class ToneAnalyzer:
     _GET_METHOD_URL = '/v3/tone?version=2017-09-21&text='
 
     def __init__(self, api_key, api_url):
-        """
-        Create object of type ToneAnalyzer for a specific API key and URL pair.
+        """Create object of type ToneAnalyzer for a specific API key and URL
+        pair.
+
+        Parameters
+        ----------
+        api_key: str
+            API key from https://www.cloud.ibm.com.
+        api_url: str
+            API URL from https://www.cloud.ibm.com.
         """
         self._api_key = api_key
         self._api_url = api_url
