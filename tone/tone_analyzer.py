@@ -18,7 +18,14 @@ class ToneAnalyzer:
 
     def __init__(self, api_key, api_url, json_file=None):
         """Create object of type ToneAnalyzer for a specific API key and URL
-        pair.
+        pair. Loads tone data from a previously created JSON file if
+        such a file is specified and exists.
+
+        Preconditions
+        -------------
+        The file specified by `json_file' (or
+        `_DEFAULT_JSON_FILENAME') must be formated in same fashion as
+        `_save_tone()'.
 
         Parameters
         ----------
@@ -26,6 +33,8 @@ class ToneAnalyzer:
             API key from https://www.cloud.ibm.com.
         api_url: str
             API URL from https://www.cloud.ibm.com.
+        json_file: str
+            Name of JSON file to save and load from.
         """
         self._api_key = api_key
         self._api_url = api_url
@@ -97,11 +106,41 @@ class ToneAnalyzer:
         self._saved_tones[text] = tone
 
     def save_tones_to_file(self, filename=None):
+        """Save current tone data to a JSON file.
+
+        If `filename' is not specified then save to the session JSON
+        file (i.e. member `_json_file').
+
+        Parameters
+        ----------
+        filename: str
+            Filename of JSON file to save to.
+
+        Returns
+        -------
+        None
+        """
         out_filename = self._json_file if filename is None else filename
         with open(out_filename, 'w') as outfile:
             json.dump(self._saved_tones, outfile)
 
     def load_tones_from_file(self, filename=None):
+        """Load tone data from a file.
+
+        Preconditions
+        -------------
+        Must not call until after `__init__()` has executed thereby
+        setting member `_json_file')
+
+        Parameters
+        ----------
+        filename: str
+            Name of JSON file to load from.
+
+        Returns
+        -------
+        None
+        """
         in_filename = self._json_file if filename is None else filename
         try:
             with open(in_filename, 'r') as infile:
