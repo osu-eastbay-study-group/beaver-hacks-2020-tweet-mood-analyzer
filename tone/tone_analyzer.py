@@ -13,5 +13,5 @@ class ToneAnalyzer:
         Create object of type ToneAnalyzer for a specific API key and URL pair.
         """
         self._api_key = api_key
-        self._api_key = api_url
+        self._api_url = api_url
         self._saved_tones = {}  # keys: strings, values: tone dict for string
