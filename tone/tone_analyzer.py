@@ -1,4 +1,4 @@
-from urllib import parse
+import urllib
 import requests
 import json
 
