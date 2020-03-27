@@ -81,3 +81,17 @@ class ToneAnalyzer:
         response = requests.get(request_url, auth=('apikey', api_key))
         tone = json.loads(response.content.decode())
         self._saved_tones[text] = tone
+
+    def save_tones_to_file(self, filename=None):
+        out_filename = self._json_file if filename is None else filename
+        with open(out_filename, 'w') as outfile:
+            json.dump(self._saved_tones, outfile)
+
+    def load_tones_from_file(self, filename=None):
+        in_filename = self._json_file if filename is None else filename
+        try:
+            with open(in_filename, 'r') as infile:
+                return json.load(infile)
+        except FileNotFoundError:  # trying to open non-existent file
+            print("Tone file does not exist. "
+                  + f"All new tones will be saved to {self._json_file}.")
