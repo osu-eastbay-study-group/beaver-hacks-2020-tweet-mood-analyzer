@@ -24,7 +24,7 @@ class ToneAnalyzer:
     # Default name of JSON file to store tones.
     _DEFAULT_JSON_FILENAME = 'tones.json'
 
-    def __init__(self, api_key, api_url, json_file=None):
+    def __init__(self, api_key_env, api_url_env, json_file=None):
         """Create object of type ToneAnalyzer for a specific API key and URL
         pair. Loads tone data from a previously created JSON file if
         such a file is specified and exists.
@@ -38,14 +38,18 @@ class ToneAnalyzer:
         Parameters
         ----------
         api_key: str
-            API key from https://www.cloud.ibm.com.
+            Name of environmet variable containing API key (from
+            https://www.cloud.ibm.com).
         api_url: str
-            API URL from https://www.cloud.ibm.com.
+            Name of environmet variable containing API URL from
+            https://www.cloud.ibm.com.
         json_file: str
             Name of JSON file to save and load from.
+
         """
-        self._api_key = api_key
-        self._api_url = api_url
+        load_dotenv()
+        self._api_key = os.getenv(api_key_env)
+        self._api_url = os.getenv(api_url_env)
 
         # TODO: Write exception class for filename validation.
         if json_file is not None:
@@ -189,8 +193,7 @@ if __name__ == '__main__':
     # Command line usage only.
     # Can analyze a string from the commandline with the following command:
     # $ python tone_analyzer.py "Text-to-analyze"
-    load_dotenv()
     text = argv[1]
-    ta = ToneAnalyzer(os.getenv('TONE_KEY'), os.getenv('TONE_URL'))
+    ta = ToneAnalyzer('TONE_KEY', 'TONE_URL')
     print(ta.analyze_tone(text))
     ta.save_tones_to_file()
