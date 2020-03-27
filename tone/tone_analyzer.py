@@ -8,6 +8,11 @@ class ToneAnalyzer:
     Tone Analyzer API https://www.ibm.com/watson/services/tone-analyzer/
     to perform tone analysis. Works with a single API key/URL pair."""
 
+    # CLASS CONSTANTS
+    # ---------------
+    # Specific to using general-purpose endpoint via the GET request method.
+    _GET_METHOD_URL = '/v3/tone?version=2017-09-21&text='
+
     def __init__(self, api_key, api_url):
         """
         Create object of type ToneAnalyzer for a specific API key and URL pair.
