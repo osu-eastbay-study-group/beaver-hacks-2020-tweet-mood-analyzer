@@ -1,3 +1,6 @@
+#   PyPI Dependencies: requests
+# Usage (commandline): $ python tone_analyzer.py https://twitter.com/RegexCrossword/status/<tweet-num>
+
 import requests
 import json
 import urllib
