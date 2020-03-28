@@ -1,0 +1,38 @@
+body {
+    background: #262626;
+    width: 70%;
+    margin: auto auto;
+    /* border: 1px solid green; */
+    color: white;
+    /* padding-left: 10%; */
+}
+
+.child_dots {
+    font-size: 200px;         
+    color: #00bdfd;
+    line-height: .5;
+    /* text-align: center; */
+    letter-spacing: 10px;
+    text-align: center;
+    padding-left: 0;
+}
+
+p {
+    font-size: 152;
+    color:white;
+    padding-left: 10%;
+}
+
+h2 {
+    color: white;
+    padding-left: 10%;
+}
+
+.twitter-tweet {
+    margin-left: 10%;
+    /* margin-right: 80%; */
+}
+
+.search_text {
+    color: black;
+}
