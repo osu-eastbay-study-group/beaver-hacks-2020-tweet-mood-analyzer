@@ -7,14 +7,17 @@ import urllib
 import sys
 
 
-class OEmbedFinder:
+class OembedFinder:
+    """Class to handle calls to Twitter oEmbedded API. SHOULD NOT BE
+    INSTANTIATED as contains only static methods."""
+
     OEMBED_LINK = 'https://publish.twitter.com/oembed'
 
     @staticmethod
     def get_oembed(tweet_link):
-        """Get the data of a Twitter oEmbed in the form of a dict.
+        """Get the data of a Twitter oembed in the form of a dict.
 
-        Also unquotes the HTML code before returning the oEmbed dict.
+        Also unquotes the HTML code before returning the oembed dict.
 
         Parameters
         ----------
@@ -24,9 +27,12 @@ class OEmbedFinder:
         Returns
         -------
         dict
-            Data associated with the oEmbed.
+            Data associated with the oembed.
         """
-        response = requests.get(OEmbedFinder.OEMBED_LINK,
+
+        # TODO: Add input validation for tweet_link?
+
+        response = requests.get(OembedFinder.OEMBED_LINK,
                                 params=(('url', tweet_link),))
         oembed = json.loads(response.content.decode())
 
@@ -53,9 +59,9 @@ if __name__ == '__main__':
     tweet_link = sys.argv[1]
 
     # -----------------------------------------------------------------------------
-    # Print the data of the specified oEmbed.
-    oembed = OEmbedFinder.get_oembed(tweet_link)
+    # Print the data of the specified oembed.
+    oembed_data = OembedFinder.get_oembed(tweet_link)
 
-    # Print the oEmbed Data
-    for key, val in oembed.items():
+    # Print the oembed Data
+    for key, val in oembed_data.items():
         print(f'\n{key}:\n', repr(f'{val}'), sep='')
