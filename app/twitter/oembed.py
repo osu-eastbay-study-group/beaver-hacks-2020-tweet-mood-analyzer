@@ -1,6 +1,7 @@
 import requests
 import json
 import html
+import urllib
 
 
 class OEmbedFinder:
@@ -9,6 +10,8 @@ class OEmbedFinder:
     @staticmethod
     def get_oembed(tweet_link):
         """Get the data of a Twitter oEmbed in the form of a dict.
+
+        Also unquotes the HTML code before returning the oEmbed dict.
 
         Parameters
         ----------
@@ -22,7 +25,14 @@ class OEmbedFinder:
         """
         response = requests.get(OEmbedFinder.OEMBED_LINK,
                                 params=(('url', tweet_link),))
-        return json.loads(response.content.decode())
+        oembed = json.loads(response.content.decode())
+
+        # Process the 'html' to plain text without any escapes.
+        oembed['html'] = urllib.parse.unquote(oembed['html'])
+
+        # TODO: Remove remaining '\n' after </blockquote> and </script>.
+
+        return oembed
 
 
 if __name__ == '__main__':
