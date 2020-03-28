@@ -1,7 +1,7 @@
 import requests
 import json
-import html
 import urllib
+import sys
 
 
 class OEmbedFinder:
@@ -36,9 +36,23 @@ class OEmbedFinder:
 
 
 if __name__ == '__main__':
-    # Example usage
-    tweet_link = 'https://twitter.com/RegexCrossword/status/1185017497482719233'
+    # Command line usage:
+    # python oembed.py https://www.your-passed-site-here.com
+
+    # For usage in IDE/Editor
+    # -------------------------
+    # url_base = 'https://twitter.com/RegexCrossword/status/'
+    # url_num = '1185017497482719233'
+    # tweet_link = url_base + url_num
+
+    # For usage as command line script
+    # --------------------------------
+    tweet_link = sys.argv[1]
+
+    # -----------------------------------------------------------------------------
+    # Print the data of the specified oEmbed.
     oembed = OEmbedFinder.get_oembed(tweet_link)
 
-    # Print the embedded HTML
-    print(html.unescape(oembed['html']))  # Doesn't quite unescape it.
+    # Print the oEmbed Data
+    for key, val in oembed.items():
+        print(f'\n{key}:\n', repr(f'{val}'), sep='')
