@@ -19,6 +19,10 @@ class OembedFinder:
 
         Also unquotes the HTML code before returning the oembed dict.
 
+        Preconditions
+        -------------
+        tweet_link must point to a valid existing tweet status.
+
         Parameters
         ----------
         tweet_link: str
