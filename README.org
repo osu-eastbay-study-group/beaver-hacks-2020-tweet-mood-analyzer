@@ -60,13 +60,16 @@ content along with its most dominant tone breakdown.
    #+end_src
 
 * Credits and Thanks
+- [[https://www.ibm.com/watson][IBM Watson]]
 - [[https://coreyms.com/][Corey Schafer]]
 - [[https://www.udemy.com/user/coltsteele/][Colt Steele]]
 - [[https://www.w3schools.com/][w3schools]]
+- [[https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer][Ritwick Dey]]
+
 * Authors
-- Jeremy Tsang
-- Kyle Bell
-- Ryan Davis
+- [[https://github.com/kylebell3][Kyle Bell]]
+- [[https://github.com/RyanIn3D/][Ryan Davis]]
+- [[https://github.com/jeremytsang1][Jeremy Tsang]]
 
 # Local Variables:
 # before-save-hook: org-make-toc
