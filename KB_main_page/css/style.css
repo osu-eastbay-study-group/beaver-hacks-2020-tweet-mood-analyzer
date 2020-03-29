@@ -36,6 +36,11 @@ footer {
     line-height: 0;
 }
 
+#parent_dot {
+    font-size: 30vw;
+    padding-top: 150px;
+}
+
 .child_dots {
     font-size: 15vw;
     /* font-size: 150px;          */
