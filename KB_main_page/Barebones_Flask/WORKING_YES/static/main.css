@@ -58,9 +58,10 @@ h2 #parent {
 #parent_dot p {
     font-size: 500px;
     line-height: .56;
+    /* padding-left: 30px; */
     /* padding-top: 5px; */
     /* padding-bottom: 5px; */
-    color: green
+    /* color: green */
 }
 
 .navbar-fixed-top {
@@ -83,12 +84,18 @@ button #submit {
 }
 
 .row .col-lg-12 {
-    color: red;
+    /* color: red; */
     padding-left: 55px;
 }
 
+.row .col-lg-12 span{
+    /* color: red; */
+    font-size: 15px;
+    padding-left: 20px;
+}
+
 .row .col-xs-6 {
-    color: green;
+    /* color: green; */
     padding-left: 15px;
 }
 
@@ -125,7 +132,8 @@ p {
 } */
 
 a:hover{
-    color: black;
+    /* color: black; */
     text-decoration: none;
     z-index: 9999;
+    filter: brightness(1);
 }
