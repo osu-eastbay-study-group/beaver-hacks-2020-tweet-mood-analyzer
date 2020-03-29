@@ -10,14 +10,16 @@ body {
 footer {
     /* padding: 0 0 5px 0; */
     background: #262626;
+    border-top: 1px solid gray;
 }
 
 .k_footer {
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
     margin-top: 0;
     margin-bottom: 0;
     padding-left: 29px;
+  
 }
 
 .pt-url {
@@ -36,9 +38,16 @@ footer {
     line-height: 0;
 }
 
-#parent_dot {
-    font-size: 30vw;
-    padding-top: 150px;
+#parent_dot p {
+    font-size: 500px;
+    line-height: .56;
+    /* padding-top: 5px; */
+    /* padding-bottom: 5px; */
+    color: green
+}
+
+#childh2 {
+    margin-bottom:;
 }
 
 .child_dots {
