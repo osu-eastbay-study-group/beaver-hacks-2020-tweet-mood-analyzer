@@ -68,6 +68,7 @@ content along with its most dominant tone breakdown.
      cd app
      flask run
    #+end_src
+4) As deployment has not been completed, visit app locally on your machine at http://localhost:5000.
 
 * Credits and Thanks
 - [[https://www.ibm.com/watson][IBM Watson]]
