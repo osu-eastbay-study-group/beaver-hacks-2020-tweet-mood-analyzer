@@ -5,6 +5,7 @@ class Tweet(db.Model):
     # db.Integer should be replaced with Twitter ID -- picked up from form?
     id = db.Column(db.Integer, primary_key=True)
     tweet_id = db.Column(db.Integer, nullable=False)
+    tweet_url = db.Column(db.String(), nullable=False)
     # in order: name of mood (string), intensity (integer)
     dom_tone = db.Column(db.String(), nullable=False)
     dom_intensity = db.Column(db.Integer, nullable=False)
