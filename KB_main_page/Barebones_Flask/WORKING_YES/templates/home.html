@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container">
+  <div class="jumbotron">
+      <div class="row">
+          <div class="col-lg-6 col-med-6 col-sm-6 col-xs-12">
+              <h2 id="parent">Parent Tweet:</h2>
+
+              <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Please help I actually can’t stop playing animal crossing, I’m not even playing the game I’m just fucking running around please heeelp</p>&mdash; psidie (@pkdie0) <a href="https://twitter.com/pkdie0/status/1241592065600995334?ref_src=twsrc%5Etfw">March 22, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+              
+
+          </div>
+
+          <div class="col-lg-6 col-med-6 col-sm-6 col-xs-12" id="parent_dot">
+              <p class="child_dots"><a href="http://www.google.com">&#9679</a></p>
+          </div>
+
+          
+
+      </div>
+  
+  <span id="childh2">    
+    
+  </span>    
+
+
+  </div> <!-- /jumbotron -->
+
+  
+  <div class="container">
+  <h2>
+      <div class="row">
+          <div class="col-lg-12 col-xs-6">Child Tweets:</div>
+      </div>
+  </h2>
+  </div>
+
+
+      <span id="topdots">
+          
+          <p class="child_dots"><a href="http://www.google.com">&#9679</a>&#9679&#9679&#9679&#9679&#9679&#9679</p>
+          <p class="child_dots">&#9679&#9679&#9679&#9679&#9679&#9679&#9679</p>
+          <p class="child_dots">&#9679&#9679<a href="http://www.google.com">&#9679</a>&#9679&#9679&#9679&#9679</p>
+          <p class="child_dots">&#9679&#9679&#9679&#9679&#9679&#9679&#9679</p>
+          <p class="child_dots">&#9679&#9679&#9679&#9679&#9679&#9679&#9679</p>
+      </span>        
+</div> <!-- /container -->
+{% endblock content %}
