@@ -9,4 +9,4 @@ app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('SQLALCHEMY_DATABASE_URI'
 
 db = SQLAlchemy(app)
 
-from flaskblog import routes
+from tweet_tone import routes

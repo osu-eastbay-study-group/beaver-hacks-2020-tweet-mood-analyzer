@@ -1,4 +1,4 @@
-from tone_tweet import db
+from tweet_tone import db
 
 
 class Tweet(db.Model):
