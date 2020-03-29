@@ -3,7 +3,7 @@
 body {
   background-color: #262626;
   color: #FFFFFF;
-  padding-top: 20px;
+  padding-top: 50px;
   padding-bottom: 50px;
 }
 
@@ -34,7 +34,13 @@ footer {
     background-color: transparent !important;
 }
 
+h2 #parent {
+    padding-top: 100px;
+    margin-bottom: 100px;
+}
+
 #topdots h2 {
+    /* padding-top: 100px; */
     padding-left: 55px;
 }
 
@@ -45,6 +51,29 @@ footer {
     /* padding-bottom: 5px; */
     color: green
 }
+
+.navbar-fixed-top {
+    margin-top: 20px;
+    /* margin-bottom: 0px; */
+    /* padding-bottom: 0px; */
+    padding-right: 90px;
+    /* border: 10px solid black; */
+}
+
+.navbar-fixed-top .navbar-header {
+    padding-right: 10000px;
+}
+
+button #submit {
+    padding-right: 200px;
+}
+
+#topest{
+    padding-top: 0px;
+    background: #262626;
+    color: #262626;
+}
+
 
 #childh2 {
     /* margin-bottom:; */
