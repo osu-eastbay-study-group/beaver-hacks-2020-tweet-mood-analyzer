@@ -7,6 +7,17 @@ body {
   padding-bottom: 50px;
 }
 
+.navbar-brand div{
+    color: lightgray;
+    font-weight: 800;
+    /* font-size: 32px; */
+    background: rgb(70, 22, 70);
+    /* padding: 20px 0; */
+    /* line-height: 0; */
+    /* margin-right: 100px; */
+
+}
+
 footer {
     /* padding: 0 0 5px 0; */
     background: #262626;
