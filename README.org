@@ -23,8 +23,14 @@ searched tweet.
 
 Additionally the user may click on any of the comment dots which will show its
 content along with its most dominant tone breakdown.
+
 * Dependencies
-- Python 3.6 (for f-strings)
+|------------+---------|
+| Dependency | Version |
+|------------+---------|
+| Python     |     3.6 |
+| Bash       |       4 |
+|------------+---------|
 
 * Installation
 1) Clone this repository
