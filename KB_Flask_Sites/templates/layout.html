@@ -41,9 +41,10 @@
                     </div> <!-- /logo div -->
                     <!-- SEARCH BAR -->
                     <div class="col-lg-10 col-md-9 col-sm-9 col-xs-7 pt-url">
-                        <form> <!-- navbar classes removed to help with input bar extension -->
+                        <form method="POST" action=""> <!-- navbar classes removed to help with input bar extension -->
                             <div class="md-form form-group w-75">
-                                <input type="text" class="input-lg form-control" placeholder="Enter Tweet URL Here">
+                                <!-- <input type="text" class="input-lg form-control" placeholder="Enter Tweet URL Here"> -->
+                                    {{ form(class="form-control form-control-lg") }} <!-- NEED TO FIX -->
                             </div> <!-- /form-group -->
                         </form>
                     </div> <!-- /search bar div -->
