@@ -1,18 +1,25 @@
 body {
     background: #262626;
-    width: 70%;
-    margin: auto auto;
+    /* width: 70%; */
+    /* margin: auto auto; */
     /* border: 1px solid green; */
     color: white;
     /* padding-left: 10%; */
 }
+/* 
+.nav {
+    width: 0em;
+    margin: 0 0
+} */
 
 .child_dots {
-    font-size: 200px;         
+    /* font-size: 20vh; */
+    font-size: 15vw;         
     color: #00bdfd;
-    line-height: .5;
+    line-height: .75;
     /* text-align: center; */
-    letter-spacing: 10px;
+    letter-spacing: 15px;
+
     text-align: center;
     padding-left: 0;
 }
@@ -35,4 +42,10 @@ h2 {
 
 .search_text {
     color: black;
+}
+
+a:hover{
+    color: black;
+    text-decoration: none;
+    z-index: 9999;
 }
