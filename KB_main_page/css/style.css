@@ -53,15 +53,7 @@ h2 #parent {
 }
 
 .navbar-fixed-top {
-    margin-top: 20px;
-    /* margin-bottom: 0px; */
-    /* padding-bottom: 0px; */
-    padding-right: 90px;
-    /* border: 10px solid black; */
-}
-
-.navbar-fixed-top .navbar-header {
-    padding-right: 10000px;
+    padding-top: 20px;
 }
 
 button #submit {
