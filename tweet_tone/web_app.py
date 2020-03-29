@@ -1,4 +1,6 @@
 from flask import Flask, render_template
+from tweet_tone import app
+from tweet_tone.models import Tweet, Child
 
 
 app = Flask(__name__)
