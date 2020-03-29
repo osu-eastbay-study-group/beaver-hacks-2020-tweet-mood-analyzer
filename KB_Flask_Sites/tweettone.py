@@ -16,9 +16,9 @@ def home():
     # return render_template('home.html')
 
 
-@app.route("/about")
+@app.route("/childtweet")
 def about():
-    return render_template('about.html', title='About')
+    return render_template('childtweet.html', title='Child Tweet(s)')
 
 
 if __name__ == '__main__':
