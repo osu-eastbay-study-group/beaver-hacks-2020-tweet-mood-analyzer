@@ -4,48 +4,6 @@ from tweet_tone.forms import TwitterLinkForm
 from tweet_tone.models import Tweet, Child
 
 
-# List of colors
-tones = {
-    "anger",
-    "fear",
-    "joy",
-    "sadness",
-    "analytical",
-    "confident",
-    "tentative",
-    "none",
-}
-
-# Dummy Data
-main_tweet = {
-    'tweet_id': '1185017497482719233',
-    'tone': 'joy',
-    'intensity': '2',
-    'children': [
-        {
-            'tweet_id': '1185303393801310208',
-            'tone': 'joy',
-            'intensity': '1',
-        },
-        {
-            'tweet_id': '1185162876237029376',
-            'tone': 'joy',
-            'intensity': '1',
-        },
-        {
-            'tweet_id': '1185282630285062144',
-            'tone': 'joy',
-            'intensity': '1',
-        },
-        {
-            'tweet_id': '1185020345016827909',
-            'tone': 'joy',
-            'intensity': '1',
-        }
-    ]
-}
-
-
 @app.route("/<page_id>")
 def search(page_id):
     """Page to enter in Tweet link."""
