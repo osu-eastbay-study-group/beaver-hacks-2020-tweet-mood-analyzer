@@ -34,8 +34,8 @@ footer {
     background-color: transparent !important;
 }
 
-#topdots {
-    line-height: 0;
+#topdots h2 {
+    padding-left: 55px;
 }
 
 #parent_dot p {
@@ -47,7 +47,7 @@ footer {
 }
 
 #childh2 {
-    margin-bottom:;
+    /* margin-bottom:; */
 }
 
 .child_dots {
