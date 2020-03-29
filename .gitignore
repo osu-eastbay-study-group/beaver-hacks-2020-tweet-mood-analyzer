@@ -339,5 +339,5 @@ GitHub.sublime-settings
 .history
 
 # End of https://www.gitignore.io/api/emacs,flask,python,sublimetext,pycharm+all,visualstudiocode
-.env
+.env.tmp
 tones.json
