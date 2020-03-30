@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mood Analyzer</title>
+    <meta charset="utf-8">
+	<!-- CSS SHEET -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<!-- JAVASCRIPT -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+    <!-- SVG -->
+    <?xml version="1.0" encoding="utf-8"?>
+    <!-- Generator: Adobe Illustrator 24.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+</head>
+
+<!-- DEFAULT NAV BAR -->
+<body>
+
+    <nav class="navbar fixed-top navbar-inverse">
+        <div class="navbar-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-1 col-sm-1 col-xs-2">
+                        <a class="navbar-brand" id="logo" href="#">
+                            <img alt="Brand" src="img/test.png">
+                        </a>
+                    </div> <!-- /logo div -->
+                    <!-- SEARCH BAR -->
+                    <div class="col-md-10 col-sm-10 col-xs-9 pt-url">
+                        <form> <!-- navbar classes removed to help with input bar extension -->
+                            <div class="md-form form-group w-75">
+                                <input type="text" class="input-lg form-control" id="input-bg" placeholder="Enter Tweet URL Here">
+                            </div> <!-- /form-group -->
+                        </form>
+                    </div> <!-- /search bar div -->
+                    <div class="col-md-1 col-sm-1 col-xs-1 pb-btn">
+                        <button type="button" class="btn btn-default btn-lg navbar-btn" id="main-btn">Submit</button>
+                    </div> <!-- /button div -->
+                </div> <!-- /row -->
+            </div> <!-- /container -->
+        </div> <!-- /navbar-header -->
+    </nav>
+    <div class="container">
+        <div class="jumbotron">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                    <h3>Current Child Tweet</h3>
+                </div>
+            </div> <!-- /row : page description -->
+            <br><br>
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12 pink">
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <strong>Current Tweet</strong>
+                            <br>
+                            Mood Distribution
+                        </div>
+                    </div> <!-- /row : mood distribution title -->
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <br>
+                                <svg version="1.1" class="svg-dot distributed-dot" id="distribute-dot-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500" xml:space="preserve">
+                                    <g>
+                                        <circle cx="250" cy="250" r="243.5" id="distribute-dot-1"/>
+                                        <text x="100" y="250" font-family="sans-serif" font-size="80px" fill="white">Tentative</text>
+                                        <text x="185" y="350" font-family="sans-serif" font-size="70px" fill="white">10%</text>
+                                    </g>
+                                </svg>
+                                <br><br>
+                                <svg version="1.1" class="svg-dot distributed-dot" id="distribute-dot-2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500" xml:space="preserve">
+                                    <g>
+                                        <circle cx="250" cy="250" r="243.5" id="distribute-dot-2"/>
+                                        <text x="170" y="250" font-family="sans-serif" font-size="100px" fill="white">Joy</text>
+                                        <text x="180" y="350" font-family="sans-serif" font-size="70px" fill="white">70%</text>
+                                    </g>
+                                </svg>
+                                <br><br>
+                                <svg version="1.1" class="svg-dot distributed-dot" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500" xml:space="preserve">
+                                    <g>
+                                        <circle cx="250" cy="250" r="243.5" id="distribute-dot-3"/>
+                                        <text x="80" y="250" font-family="sans-serif" font-size="80px" fill="white">Analytical</text>
+                                        <text x="180" y="350" font-family="sans-serif" font-size="70px" fill="white">20%</text>
+                                    </g>
+                                </svg>
+                        </div>
+                    </div> <!-- /row : mood dot distribution -->
+                </div>
+                <div class="col-lg-7 col-md-6 col-sm-8 col-xs-12 text-center">
+                        <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Got these amazing stickers from <a href="https://twitter.com/16pxl?ref_src=twsrc%5Etfw">@16pxl</a>! Thank you for throwing in another too, might need to turn my laptop into a mosaic of your work now &lt;3 <a href="https://t.co/Lh0ku09FhP">pic.twitter.com/Lh0ku09FhP</a></p>&mdash; No Data (@thatsryanin3d) <a href="https://twitter.com/thatsryanin3d/status/1228419042098081793?ref_src=twsrc%5Etfw">February 14, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-12">
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <strong>Current Tweet</strong>
+                            <br>
+                            Dominant Emotion
+                        </div>
+                    </div> <!-- /row : dominant child emotion text -->
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <br>
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500" xml:space="preserve">
+                            <g id="dom-emo">
+                                <circle class="svg-dot" cx="251" cy="250" r="243.5"/>
+                                <text x="175" y="285" font-family="sans-serif" font-size="100px" fill="white">Joy</text>
+                            </g>
+                        </svg>
+                    </div> <!-- /row : dominant circle current -->
+                </div> <!-- /row : dominant emotion -->
+                <br><br>
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <strong>Parent Tweet</strong>
+                        <br>
+                        Dominant Emotion
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <br>
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500" xml:space="preserve">
+                            <g id="big-dot">
+                                <circle class="svg-dot" cx="251" cy="250" r="243.5"/>
+                                <text x="85" y="285" font-family="sans-serif" font-size="80px" fill="white">Confident</text>
+                            </g>
+                        </svg>
+                    </div> <!-- /row : dominant circle current -->
+                </div> <!-- /row : dominant emotion -->
+
+
+            </div> <!-- /row : embedded tweet area -->
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <!-- (BLANK DIVIDER AREA) -->
+                    <br><br>
+                </div>
+            </div> <!-- /row : divider -->
+            <div class="row">
+                <!-- <div class="col-lg-9 col-md-8 col-sm-9 col-xs-12 text-center"> -->
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <strong>Child Tweets</strong>
+                        </div>
+                    </div> <!-- /row : child tweet map title -->
+                    <div class="row">
+                        <br>
+                        <div class="col-lg-12">
+                            <p class="child_dots">&#9679&#9679&#9679&#9679&#9679&#9679&#9679&#9679&#9679&#9679&#9679&#9679&#9679&#9679&#9679&#9679&#9679&#9679&#9679&#9679&#9679&#9679</p>
+                            <p class="child_dots">&#9679&#9679&#9679&#9679&#9679&#9679&#9679&#9679&#9679&#9679&#9679&#9679&#9679&#9679&#9679&#9679&#9679&#9679&#9679&#9679&#9679&#9679</p>
+                            <p class="child_dots">&#9679&#9679&#9679&#9679&#9679&#9679&#9679&#9679&#9679&#9679&#9679&#9679&#9679&#9679&#9679&#9679&#9679&#9679&#9679&#9679&#9679&#9679</p>
+                            <p class="child_dots">&#9679&#9679&#9679&#9679&#9679&#9679&#9679&#9679&#9679&#9679&#9679&#9679&#9679&#9679&#9679&#9679&#9679&#9679&#9679&#9679&#9679&#9679</p>
+                        </div>
+                    </div> <!-- /row: dot row -->
+                </div> <!-- REMEMBER TO REMOVE PINK -->
+                <!-- <div class="col-lg-3 col-md-4 col-sm-3 col-xs-12 pink">
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <strong>Parent Tweet</strong>
+                            <br>
+                            Dominant Emotion
+                        </div> -->
+                    <!--/div>--> <!-- /row : parent dominant emotion title -->
+                    <!-- <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <br>
+                                <a id="dot" href="#">
+                                    <svg id="big-dot" version="1.1" class="svg-dot" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500" xml:space="preserve">
+                                        <g>
+                                            <circle cx="250" cy="250" r="243.5"/>
+                                            <text x="120" y="280" font-family="sans-serif" font-size="100px" fill="white">Mood</text>
+                                        </g>
+                                    </svg>
+                                </a>
+                        </div> -->
+                    </div> <!-- /row : dominant emotion dot -->
+                </div>
+            </div>
+        </div> <!-- /jumbotron -->
+    </div> <!-- /container -->
+
+    <footer class="footer navbar-fixed-bottom">
+        <div class="container">
+            <div class="jumbotron">
+                <span class="text-muted">Created by Absolute (Floating Point) Units | BeaverHacks 2020</span>
+                <br>
+                <span class="text-muted">
+                    <a class="txt-link" href="https://github.com/kylebell3">Kyle Bell</a>, 
+                    <a href="https://github.com/RyanIn3D">Ryan Davis</a>, 
+                    <a href="https://github.com/jeremytsang1">Jeremy Tsang</a>
+            </span>
+            </div> <!-- /jumbotron -->
+        </div> <!-- /container (footer) -->
+    </footer>
+
+</body>
+</html>
