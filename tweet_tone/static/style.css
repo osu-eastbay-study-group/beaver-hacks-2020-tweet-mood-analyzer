@@ -5,9 +5,29 @@ body {
   color: #FFFFFF;
 }
 
-/*footer {
-    padding: 0 0 5px 0;
-}*/
+/* LINK OVERRIDES */
+
+a:link {
+    color: #FFFFFF;
+    opacity: 0.4;
+}
+
+a:visited {
+    color: #FFFFFF;
+    opacity: 0.6;
+}
+
+a#logo, a#dot {
+    opacity: 1.0;
+}
+
+input#input-bg {
+    background: #D7D7D7;
+}
+
+button#main-btn {
+    opacity: 0.7;
+}
 
 .pt-url {
     padding: 10px 5px 0 15px;
@@ -19,4 +39,75 @@ body {
 
 .jumbotron {
     background-color: transparent !important;
+}
+
+/* --- ASCII DOTS --- */
+.child_dots {
+    font-size: 100px;         
+    line-height: .5;
+    letter-spacing: 10px;
+    padding-left: 0;
+}
+
+/* --- SVG CSS --- */
+
+.svg-dot:hover {
+    opacity: 0.75;
+}
+
+
+/* Distributed Dots */
+
+text {
+    fill: #FFFFFF;
+}
+
+/* TEMPORARY COLORING */
+svg g #distribute-dot-1 {
+    fill: #534265;
+}
+
+svg g #distribute-dot-2 {
+    fill: #fffa54;
+}
+
+svg g #distribute-dot-3 {
+    fill: #b68771;
+}
+
+svg #dom-emo {
+    fill: #fffa54;
+}
+
+
+/* TEMPORARY COLORING */
+svg #big-dot {
+    fill: #ba7c93;
+}
+
+svg g #big-dot {
+    width: 40%;
+}
+
+svg g #dom-emo {
+    width: 40%;
+}
+
+/* TEMPORARY -- DELETE LATER */
+
+/* Mood Distribution Dot */
+.distributed-dot {
+    width: 50%;
+}
+
+svg text {
+    display: none;
+}
+
+svg g:hover circle {
+    opacity: 0.75;
+}
+
+svg g:hover text {
+    display: block;
 }
