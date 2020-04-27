@@ -26,13 +26,13 @@ Additionally the user may click on any of the comment dots which will show its
 content along with its most dominant tone breakdown.
 
 * Images
-#+CAPTION: Page for Parent tweet / Splash Page
+*Page for Parent tweet / Splash Page*
 [[file:FrontEnd_NonCode/UI_Drafts/BeaverHacks_Dots_ParentMainPage__Kyle.png]]
 
-#+CAPTION: Focus on a child tweet
+*Focus on a child tweet*
 [[file:FrontEnd_NonCode/UI_Drafts/BeaverHacks_Dots_ChildFocusPage__Ryan.png]]
 
-#+CAPTION: Example colors for moods
+*Example colors for moods*
 [[file:FrontEnd_NonCode/BeaverHacks_HexCodeChart.png]]
 
 * Dependencies
